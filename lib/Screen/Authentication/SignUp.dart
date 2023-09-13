@@ -145,8 +145,9 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       TextFormField(
                         controller: authProvider.passwordController,
-                        obscureText: true,
+
                         decoration: InputDecoration(
+
                           labelText: 'Password',
                           labelStyle: TextStyle(color: primaryColor),
                           prefixIcon: Icon(

@@ -19,7 +19,10 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    Provider.of<NewsProvider>(context, listen: false).getNews();
+    NewsProvider newsProvider = Provider.of<NewsProvider>(context);
+    if(newsProvider.articles.isEmpty){
+      newsProvider.articles.addAll(newsProvider.previousList);
+    }
   }
   @override
   Widget build(BuildContext context) {

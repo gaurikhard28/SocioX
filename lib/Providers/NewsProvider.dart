@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:socio_x/Service/request.dart';
@@ -10,6 +12,7 @@ class NewsProvider with ChangeNotifier {
   bool _isOffline = false;
   bool _onLoad = false;
   List<String> searchList = [];
+  List<Article> previousList=[];
 
 
   List<Article> get articles => _articles;
@@ -18,6 +21,7 @@ class NewsProvider with ChangeNotifier {
 
   void setArticles(List<Article> articles) {
     _articles = articles;
+
     notifyListeners();
   }
 
@@ -29,6 +33,17 @@ class NewsProvider with ChangeNotifier {
   void setOnLoad(bool value) {
     _onLoad = value;
     notifyListeners();
+  }
+
+  void loadArticles() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? previousArticles = prefs.getString("articles");
+    if (previousArticles != null) {
+      List<dynamic> previousListItems = jsonDecode(previousArticles);
+      previousList = List<Article>.from(
+        previousListItems.map((item) => Article.fromJson(item)),
+      );
+    }
   }
 
   List<Article> searchNews(String searchTerm) {
@@ -49,6 +64,7 @@ class NewsProvider with ChangeNotifier {
       List<Article> newArticles = await newsService.getNews();
       //print(newArticles);
       _articles.addAll(newArticles);
+      sharedPreferences.setString("articles", jsonEncode(_articles));
       setOnLoad(false);
     } catch (e) {
       setOnLoad(false);
