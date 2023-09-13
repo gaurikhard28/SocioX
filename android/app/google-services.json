@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "378742987859",
+    "project_id": "sociox-2f39a",
+    "storage_bucket": "sociox-2f39a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378742987859:android:e7fac5772c8c2efbe83aa6",
+        "android_client_info": {
+          "package_name": "com.example.socio_x"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378742987859-h5e8srgqdbbg7lljflenn20nd0p643jf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.socio_x",
+            "certificate_hash": "f3a842294ddc9cdedd227f7be29d868cd17ffe54"
+          }
+        },
+        {
+          "client_id": "378742987859-894fdf9nh28nhe4nqges9g8bduqfghnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFL1mpW8fdiAnPglpV-A4vaVwMbE30_BU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378742987859-894fdf9nh28nhe4nqges9g8bduqfghnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
