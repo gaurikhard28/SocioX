@@ -78,7 +78,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       TextFormField(
                         controller: authProvider.emailController,
-                        obscureText: true,
+                        
                         decoration: InputDecoration(
                           labelText: 'Email',
                           labelStyle: TextStyle(color: primaryColor),
@@ -145,6 +145,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       TextFormField(
                         controller: authProvider.passwordController,
+                        obscureText: true,
                         decoration: InputDecoration(
                           labelText: 'Password',
                           labelStyle: TextStyle(color: primaryColor),
