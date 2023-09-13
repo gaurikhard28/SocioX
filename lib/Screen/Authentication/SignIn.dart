@@ -54,7 +54,6 @@ class _SignInPageState extends State<SignInPage> {
                   children: <Widget>[
                     TextFormField(
                       controller: authProvider.emailController,
-                      // Added controller
                       decoration: InputDecoration(
                         labelText: 'Email',
                         labelStyle: TextStyle(color: primaryColor),

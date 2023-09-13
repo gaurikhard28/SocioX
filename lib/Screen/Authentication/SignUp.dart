@@ -78,12 +78,11 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       TextFormField(
                         controller: authProvider.emailController,
-                        
                         decoration: InputDecoration(
                           labelText: 'Email',
                           labelStyle: TextStyle(color: primaryColor),
                           prefixIcon: Icon(
-                            Icons.lock,
+                            Icons.person,
                             size: SizeConfig.defaultSize * 2,
                             color: primaryColor,
                           ),
@@ -151,7 +150,8 @@ class _SignUpPageState extends State<SignUpPage> {
                           labelText: 'Password',
                           labelStyle: TextStyle(color: primaryColor),
                           prefixIcon: Icon(
-                            Icons.person,
+                            Icons.lock,
+
                             size: SizeConfig.defaultSize * 2,
                             color: primaryColor,
                           ),
